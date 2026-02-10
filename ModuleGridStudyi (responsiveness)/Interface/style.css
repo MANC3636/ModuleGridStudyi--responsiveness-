@@ -1,0 +1,171 @@
+#container{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+
+#the_interface{text-align: center;}
+
+#op_container{
+            
+            width: 1200px; 
+            background-color: lime;                    
+            }
+
+#left{
+    border: 2px solid black;
+
+}
+
+#right{
+   border: 2px solid black; 
+} 
+
+ 
+
+#the_honey{font-style: italic;
+}
+
+canvas{background-color: bisque;
+    border: 2px solid black;
+  
+}
+#gamesideBtns{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 5px;
+}
+#timerDiv{
+    display: flex;
+    justify-content: center;
+    width: auto;
+   margin: 5px;
+}
+
+#timerP1 {
+    font-size: 2em;
+    font-weight: bold;
+}  
+
+#timerP2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: green;
+
+}  
+
+
+
+.bouncing{animation:bounce 2s; animation-iteration-count: 5; }
+.bouncingBad{animation:bounceBad 2s; animation-iteration-count: 5; }  
+
+@keyframes bounce{
+    /*Y-axis animation for correct answers*/
+    0%, 20%,  100% {
+        transform: translateY(0);
+        color: blue;
+    }
+    10%, 50%, 70%{
+        transform: translateY(-20px);
+        color: green;
+    }
+}
+@keyframes bounceBad{
+    /*X-axis animation for wrong answers*/
+    0%, 20%,  100% {
+        transform: translateX(0);
+        color: purple;
+    }    
+    10%, 50%, 70%{
+        transform: translateX(20px);
+        color: red;
+    }
+}
+@media screen and (max-width: 1300px) {
+    #op_container {
+        width: 600px;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px
+    }
+    #left, #right {
+        width: 90%;
+        float: none;
+        margin: 10px 0;
+    }
+}
+/* ---------------------------------tablet responsiveness */
+@media screen and (max-width: 700px) {
+    #the_interface p {
+        font-size: 14px;
+    }
+    #op_container {/* contains game side */
+        width: 100%;
+        height: 700px;
+        flex-direction: column;
+        align-items: center;
+       
+    }
+    #dino {
+        width: 50px;
+        height: 50px;
+        top: 180px;
+    }
+    #rock {
+        width: 35px;
+        height: 35px;
+        top: 180px;
+        left: 300px;
+    }
+    #left {/* games & timer */
+        width: 90%;
+        height : 150px;
+        float: none;
+        margin: 10px 0;
+        gap: 5px;
+        
+    }
+      #right {/* math block */
+        width: 90%;
+        height : 300px;
+        float: none;
+        margin: 10px 0;
+    }
+    #game1 {/* pong */
+        width: 80%;
+        height: auto;
+        display: none;
+    }
+#game {/* dino*/
+        width: 50%;
+        height: 300px;
+        display: none;
+    }
+    
+    #controls{/* gameside buttons,  & timer */
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    #gamesideBtns{
+        flex-direction: row;
+        gap: 0px;
+        justify-content: center;
+        align-items: left;
+    }
+    #timerDiv{
+        flex-direction: row;
+        gap: 5px;
+    }
+
+/* ------------------------------------phone responsiveness---------------------------------- */
+}
+@media screen and (max-width: 400px) {
+    #the_interface p {
+        font-size: 12px;
+    }
+}

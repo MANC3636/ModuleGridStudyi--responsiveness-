@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../DinoGame/DinoStyle.css">
+
+    <title>The Addition Game Modularized for two games</title> 
+
+    <style>
+        
+    </style>
+</head>
+<body>
+
+     
+    <div id="container" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 1fr); gap:10px" >
+        <div id="header" style="grid-column: span 2; background-color: lightcoral;">
+            <h1>The Addition Game Modularized for two games</h1>
+            <h2>Responsiveness: Interface/index1.html</h2>lapto
+            <h2 id="laptop">laptop=1023/769</h2> &  <h2 id="tablet">tablet=768/481</h2>
+            <button id="mathAddBtn" ; >Math Addition TBD</button>
+            <button id="mathSubBtn" ; >Math Subtraction TBD</button><br>
+            <button id="reset" >reset when game stops</button>
+        </div>
+        
+
+        
+        <!-- <div id="op_container" style="display: flex; flex-direction: row; align-items: center; gap: 20px;"> -->
+        <div id="op_container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                    <!------------------game side------------------>
+            <div id="left"><p id="interface_game">We are game</p>
+                
+                <br>
+                <div id="controls" style="display:flex; justify-content: space-between; width: 300px; height: 30px;">
+                    <div id="timerDiv" style="display:flex; justify-content: auto; width: auto; gap: 10px;">
+                        <p id="timerP1" style="display: left;">3:00 </p>
+                        <p id="timerP2"> Remaining</p>
+                    </div>    
+                    <div id="gamesideBtns" style="display:flex;  margin-left: 0%;">
+                         <button id="funBtn1" style="display:none;" onclick="document.getElementById('game').style='display:block'"; >Dino Button</button>
+                    
+                        <button id="funBtn" style="display:none;" >Pong Button1</button>
+                       </div>
+                    
+                    
+                </div>
+                <canvas id="game1" width="300px" height="300px"></canvas><!-- Pong, funBtn -->
+
+                <div id="game" style="display: none;"><!-- dino game, funBtn1 -->
+            
+                    <div id="dino">Dino Here</div>
+                    <div id="rock">Rock Here</div>
+                    <h1>Jan 25: still working on responsiveness</h1>
+                    <h1 id="score"></h1><!---------awkwardly placed; might move-->
+                </div>
+            
+
+            </div>  </div>    
+                                    <!-----------------math side------------------->
+            <div id="right" style="display:none"><p id="interface_math">we're in Math</p>
+                
+                <br>
+                <div id="buttonDiv" style="display:none">
+                    <button id="mathBtn" onclick="document.getElementById('funBtn').style='display:inline';">mathBtn=funBtn=Pong</button>
+                    <button id="mathBtn2" onclick="document.getElementById('funBtn1').style='display:inline';">mathBtn2=funBtn1=Dino</button>
+                </div>
+                <p id="phraseA" class="question">... </p><p id="phraseB">...</p>
+                <input  id="input1" inputmode="numeric" pattern="[0-9]*" type="text" name="ans1" placeholder="2+what+10" >
+                <button id="mysubmit1"> submit</button>     
+                <p id="response1">...</p>
+
+                        <!-------------------Q2------------------->
+
+                <p id="phraseC" class="question">... </p><p id="phraseD">...</p>
+                <input  id="input2" inputmode="numeric" pattern="[0-9]*" type="text" name="ans1" placeholder="2+what = 10" >
+                <button id="mysubmit2"> submit</button>
+                <p id="response2">...</p>
+
+                        <!-------------------Q3------------------->
+                        
+                <p id="phraseE" class="question">... </p><p id="phraseF">...</p>
+                <input  id="input3" inputmode="numeric" pattern="[0-9]*" type="text" name="ans1" placeholder="2+what = 10" >
+                <button id="mysubmit3"> submit</button>
+                <p id="response3">...</p>
+            </div>
+            <div id="the_interface" style="grid-column: span 2; background-color: aqua;"><p><b style="color: blueviolet;">Mid-Jan, still working on responsiveness <br>
+                trouble with the dinotop & rockTop; I can't get their pos correct</b> <br> blah <br><br><b style="color: red; font-size: 15px; "><u>Blah</u></b> . <br>
+                <br><br> More Blah. <br> <br><b style="color: red;"> </b> </p>
+                <p id="screen-width"></p>
+            </div>
+    <script>
+        let screenWidth = window.innerWidth;
+        setInterval(() => {
+            screenWidth = window.innerWidth;
+            document.getElementById("screen-width").innerHTML = "Screen width: " + screenWidth;
+        }, 500);
+        //document.getElementById("screen-width").innerHTML = "Screen width: " + screenWidth;
+    </script>
+
+        <audio src="ominous.wav" id="warningSound"></audio>
+        <audio src="zing.wav" id="rightAnsSound"></audio>
+        
+        
+        <audio src="defeat.wav" id="defeat1"></audio>
+        <audio src="game-ball-tap.wav" id="ballHitSound"></audio>
+        <audio src="defeat2.mp3" id="defeat2"></audio>
+    </div>
+    
+
+      <script src="../Game1/module2JS.js"></script>
+      <script src="../DinoGame/script.js"></script>
+      
+      <script src="module1JS.js"></script>
+    
+</body>
+</html>

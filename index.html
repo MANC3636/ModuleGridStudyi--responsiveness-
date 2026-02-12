@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Modules Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .module-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .module-card h2 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .module-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .module-card a {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            font-weight: bold;
+        }
+
+        .module-card a:hover {
+            opacity: 0.8;
+        }
+
+        .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .modules-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .module-card {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .header p {
+                font-size: 0.95em;
+            }
+
+            .module-card h2 {
+                font-size: 1.2em;
+            }
+
+            .icon {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 Game Modules Hub</h1>
+            <p>Choose a module to get started</p>
+        </div>
+
+        <div class="modules-grid">
+            <!-- Dino Game -->
+            <div class="module-card">
+                <div class="icon">🦖</div>
+                <h2>Dino Game</h2>
+                <p>An arcade-style dinosaur game where you avoid obstacles and test your reflexes.</p>
+                <a href="DinoGame/index.html">Play Dino Game</a>
+            </div>
+
+            <!-- Game 1 (Pong) -->
+            <div class="module-card">
+                <div class="icon">🎾</div>
+                <h2>Pong Game</h2>
+                <p>A classic Pong arcade game. Test your skills and compete for high scores.</p>
+                <a href="Game1/index2.html">Play Pong</a>
+            </div>
+
+            <!-- Interface/Addition Game -->
+            <div class="module-card">
+                <div class="icon">➕</div>
+                <h2>Addition Game</h2>
+                <p>Educational game combining arcade gameplay with math addition challenges.</p>
+                <a href="Interface/index.html">Play Addition</a>
+            </div>
+
+            <!-- Math Addition Module -->
+            <div class="module-card">
+                <div class="icon">🔢</div>
+                <h2>Math Addition Module</h2>
+                <p>Standalone math addition module with focused challenge problems.</p>
+                <a href="MathAdd/index.html">Start Math Addition</a>
+            </div>
+
+            <!-- Math Subtraction Module -->
+            <div class="module-card">
+                <div class="icon">➖</div>
+                <h2>Math Subtraction Module</h2>
+                <p>Standalone math subtraction module for practice and learning.</p>
+                <a href="MathSub/index.html">Start Math Subtraction</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

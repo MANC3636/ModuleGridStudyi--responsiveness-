@@ -1,17 +1,19 @@
-console.log("we're in Module2")
+//console.log("we're in Module2")
 
 let game11=document.getElementById("interface_game")
 game11.innerHTML=" "
 
-let funBtn=document.getElementById("funBtn")
-funBtn.addEventListener("click", ()=>{game1(); const canvas=document.getElementById("game1") //canvas did not need an id; maybe b/s there's only one
-const context=canvas.getContext("2d");
+let funBtn=document.getElementById("funBtnStart")
+funBtn.addEventListener("click", ()=>{game1(); 
+funBtn.addEventListener("touchstart", ()=>{game1();})      
+  const canvas=document.getElementById("game1") //canvas did not need an id; maybe b/s there's only one
+    const context=canvas.getContext("2d");
 canvas.style.display="block";
 })  
 
  //reset button to reset page when game stops
  let resetBtn=document.getElementById("reset") 
-    resetBtn.addEventListener("click", ()=>{location.reload();})     
+resetBtn.addEventListener("click", ()=>{location.reload();})     
 
 
 function ball_mvt(ball, paddle, player, midX){
@@ -100,17 +102,43 @@ const render=()=> {
 
 document.addEventListener("keydown", e=>{
     if (e.code=="ArrowLeft"){paddle.direction=-5;
-        const testingSound=document.getElementById("defeat1")   ;
+        const testingSound=document.getElementById("defeat1");
         testingSound.play();
     }
     if (e.code=="ArrowRight"){paddle.direction=5;
-        const testingSound=document.getElementById("defeat1")   ;
+        const testingSound=document.getElementById("defeat1");
         testingSound.play();
     }
 });
 
 document.addEventListener("keyup", ()=> {paddle.direction=0;});
-//document.addEventListener("player.hits ==2", pauseGame(), false);
+
+// -- on-screen / touch / pointer controls for mobile:
+const leftBtn = document.getElementById('leftBtn');
+const rightBtn = document.getElementById('rightBtn');
+
+function startLeft(){ paddle.direction = -6; }
+function startRight(){ paddle.direction = 6; }
+function stopMove(){ paddle.direction = 0; }
+
+if (leftBtn){
+  leftBtn.addEventListener('pointerdown', e=>{ e.preventDefault(); startLeft(); });
+  leftBtn.addEventListener('pointerup', stopMove);
+  leftBtn.addEventListener('pointercancel', stopMove);
+  leftBtn.addEventListener('pointerleave', stopMove);
+}
+if (rightBtn){
+  rightBtn.addEventListener('pointerdown', e=>{ e.preventDefault(); startRight(); });
+  rightBtn.addEventListener('pointerup', stopMove);
+  rightBtn.addEventListener('pointercancel', stopMove);
+  rightBtn.addEventListener('pointerleave', stopMove);
+}
+
+// Make buttons also respond to touchstart for older browsers
+['touchstart','touchend'].forEach(ev => {
+  if (leftBtn) leftBtn.addEventListener(ev, e=>{ e.preventDefault(); if (ev==='touchstart') startLeft(); else stopMove(); });
+  if (rightBtn) rightBtn.addEventListener(ev, e=>{ e.preventDefault(); if (ev==='touchstart') startRight(); else stopMove(); });
+});
 
 requestAnimationFrame(render)
 

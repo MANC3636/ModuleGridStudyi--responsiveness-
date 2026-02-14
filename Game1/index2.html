@@ -6,12 +6,34 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <p id="index2_para">we're in index2</p></div>
+  <main id="interface_game" class="game-container">
+    <header>
+      <h1>Pong — touch + keyboard</h1>
+      <small style="color:#94a3b8">Use arrows or on-screen buttons</small>
+    </header>
 
+    <!-- responsive canvas (visual size scales via CSS; drawing uses 600x400 coordinates) -->
+    <canvas id="game1" width="600" height="400" aria-label="Pong game canvas"></canvas>
+<!-- 
+    <div class="controls">
+      <div class="control-row">
+        <button id="funBtn" class="primary">Start</button>
+        <button id="reset" class="secondary">Reset</button>
+      </div>
 
-    
-    <script src="module2JS.js" ></script>
-    
+      <div class="control-row touch-controls" role="group" aria-label="On-screen paddle controls" style="background-color: blue;">
+        <button id="leftBtn" class="control-btn" aria-label="Move left">◀</button>
+        <button id="rightBtn" class="control-btn" aria-label="Move right">▶</button>
+      </div>
+
+      <p id="info">Controls: Arrow keys or tap the buttons. Buttons are large for touch.</p>
+    </div> -->
+
+    <!-- optional audio placeholders (files not required) -->
+    <audio id="ballHitSound"></audio>
+    <audio id="defeat1"></audio>
+  </main>
+
+  <script src="module2JS.js"></script>
 </body>
 </html>

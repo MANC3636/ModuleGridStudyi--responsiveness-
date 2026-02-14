@@ -47,6 +47,23 @@
                     
                 </div>
                 <canvas id="game1" width="300px" height="300px"></canvas><!-- Pong, funBtn -->
+                
+    <!-- responsive canvas (visual size scales via CSS; drawing uses 600x400 coordinates) -->
+    <canvas id="game1" width="600" height="400" aria-label="Pong game canvas"></canvas>
+
+    <div class="controls"><!-- buttons for pong might hide them -->
+      <div class="control-row">
+        <button id="funBtnStart" class="primary">Start</button>
+        <button id="reset" class="secondary">Reset</button>
+      </div>
+
+      <div class="control-row touch-controls" role="group" aria-label="On-screen paddle controls" style="background-color: blue;">
+        <button id="leftBtn" class="control-btn" aria-label="Move left">◀</button>
+        <button id="rightBtn" class="control-btn" aria-label="Move right">▶</button>
+      </div>
+
+      <p id="info">Controls: Arrow keys or tap the buttons. Buttons are large for touch.</p>
+    </div>
 
                 <div id="game" style="display: none;"><!-- dino game, funBtn1 -->
             

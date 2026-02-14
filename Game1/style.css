@@ -1,0 +1,33 @@
+/* Responsive styles for Pong controls and canvas */
+:root{
+  --accent:#5b21b6; /* purple */
+  --bg:#0b1020;
+  --control-bg:rgba(255,255,255,0.06);
+  --btn-size:72px;
+}
+body{font-family:Inter, system-ui, Arial, sans-serif; background:var(--bg); color:#fff; margin:0; display:flex; align-items:center; justify-content:center; min-height:100vh}
+.game-container{width:min(920px, 96vw); padding:18px; box-sizing:border-box}
+header{display:flex; justify-content:space-between; align-items:center; margin-bottom:8px}
+header h1{font-size:1.05rem; margin:0}
+#game1{display:block; width:100%; height:auto; background:linear-gradient(180deg,#07102a 0%, #001219 100%); border-radius:8px; box-shadow:0 6px 20px rgba(0,0,0,0.6);}
+.controls{margin-top:12px; display:flex; gap:12px; flex-direction:column}
+.control-row{display:flex; gap:12px; align-items:center}
+.control-row.touch-controls{justify-content:center}
+button{appearance:none; border:0; cursor:pointer; border-radius:10px; padding:10px 14px; font-weight:600}
+.primary{background:var(--accent); color:white; box-shadow:0 6px 18px rgba(91,33,182,0.28)}
+.secondary{background:transparent; color:#ddd; border:1px solid rgba(255,255,255,0.08)}
+.control-btn{width:var(--btn-size); height:var(--btn-size); font-size:1.6rem; background:var(--control-bg); color:#fff; display:inline-grid; place-items:center; user-select:none; touch-action:manipulation}
+.control-btn:active{transform:translateY(1px) scale(0.98)}
+#info{margin-top:8px; color:#cbd5e1; font-size:0.95rem}
+/* Make controls stack on small screens */
+@media (max-width:460px){
+  :root{--btn-size:60px}
+  header h1{font-size:0.95rem}
+  .control-row{gap:8px}
+}
+/* Larger screens: show buttons at right of canvas */
+@media (min-width:740px){
+  .game-container{display:grid; grid-template-columns:1fr 220px; gap:18px; align-items:start}
+  .controls{margin-top:0}
+  header{grid-column:1 / -1}
+}

@@ -55,12 +55,12 @@ height: 50px;
 
 position: relative; /* relative to what? */
 top: 175px;
-left: 550px;
+left: 300px;
 /* background-image: url("https://th.bing.com/th/id/R.9478ee9836ff0a78b241b99ba30aaa72?rik=khZ%2bvW%2fwuGQOBA&riu=http%3a%2f%2fpixelartmaker.com%2fart%2fda268f06e621b21.png&ehk=dEYs2jkBmKLTdT6nRtBB3Vs19%2bSIEMg0U8mGPHOSR7g%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"); */
 background-image: url("dino_rock.png") ;
 background-size: cover;
 /*----------animation-----------*/
-animation-name: moveRock;
+animation-name: moveRock; 
 animation-iteration-count: infinite;
 animation-duration:  1.3s;
 }
@@ -71,7 +71,7 @@ animation-duration:  1.3s;
 }
 /* make rock move and rotate */
 @keyframes moveRock1{
-    0%{left: 550px;}
+    0%{left: 300px;}
     100%{left: -50px; }
 }
 

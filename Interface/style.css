@@ -1,5 +1,5 @@
 #container{
-    width: 100%;
+    width: 60%;
     margin: auto;
     text-align: center;
 }
@@ -9,11 +9,12 @@
 
 #op_container{
             
-            width: 1200px; 
+            width: 800px; 
             background-color: lime;                    
             }
 
 #left{
+    width: 300px;
     border: 2px solid black;
 
 }

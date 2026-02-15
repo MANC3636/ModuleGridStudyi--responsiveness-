@@ -26,7 +26,7 @@
                
         <!-- <div id="op_container" style="display: flex; flex-direction: row; align-items: center; gap: 20px;"> -->
         <!------------------container for game and math sides; currently uses grid, but might switch to flexbox or inline grid------------------>
-            <div id="op_container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background-color: brown;">
+            <div id="op_container" style="display: grid; grid-template-columns: repeat(); gap: 10px; background-color: brown;">
                                     <!------------------game side------------------>
             <div id="left"><p id="interface_game">We are game</p>
                 
@@ -49,7 +49,7 @@
                         <p id="timerP1" style="display: left;">3:00 </p>
                         <p id="timerP2"> Remaining</p>
                     </div>   
-       <canvas id="game1" width="300px" height="300px"> </canvas><!-- Pong, funBtn -->
+       <canvas id="game1" width="500px" height="300px"> </canvas><!-- Pong, funBtn -->
 
         <div class="controls" id="Pcontrols" style="display: none;"><!-- buttons for pong might hide them -->
         <div class="control-row" >

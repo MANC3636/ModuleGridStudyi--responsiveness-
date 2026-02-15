@@ -56,11 +56,6 @@ setInterval(()=>{
         alert("Game Over! Your final score is: " + NumScore);
        location.reload(); /* reloads the current document */
         
-        
-        
-        
-        
-        
          }  
      else {
         rock.style.display = "inline-block";

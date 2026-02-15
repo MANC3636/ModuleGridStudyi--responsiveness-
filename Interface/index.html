@@ -44,15 +44,15 @@
                 
                 
     <!-- responsive canvas (visual size scales via CSS; drawing uses 600x400 coordinates) -->
-     <div id="game module">
+     <div >
                     <div id="timerDiv" style="display:flex; justify-content: auto; width: auto; gap: 10px;">
                         <p id="timerP1" style="display: left;">3:00 </p>
                         <p id="timerP2"> Remaining</p>
                     </div>   
        <canvas id="game1" width="300px" height="300px"> </canvas><!-- Pong, funBtn -->
 
-        <div class="controls"><!-- buttons for pong might hide them -->
-        <div class="control-row">
+        <div class="controls" id="Pcontrols" style="display: none;"><!-- buttons for pong might hide them -->
+        <div class="control-row" >
             <button id="funBtnStart" class="primary">Start</button>
             <button id="reset" class="secondary">Reset1</button>
         </div>

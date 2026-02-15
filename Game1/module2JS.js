@@ -2,14 +2,19 @@
 
 let game11=document.getElementById("interface_game")
 game11.innerHTML=" "
+//controls for game1
+let pongControl=document.getElementById("Pcontrols")
 
 let funBtn=document.getElementById("funBtnStart")
-funBtn.addEventListener("click", ()=>{game1(); 
-funBtn.addEventListener("touchstart", ()=>{game1();})      
-  const canvas=document.getElementById("game1") //canvas did not need an id; maybe b/s there's only one
+funBtn.addEventListener("click", ()=>{game1();})  
+
+funBtn.addEventListener("touchstart", ()=>{game1();
+    startTimer(60, document.getElementById("timerP1"));
+})      
+    const canvas=document.getElementById("game1") //canvas did not need an id; maybe b/s there's only one
     const context=canvas.getContext("2d");
 canvas.style.display="block";
-})  
+ 
 
  //reset button to reset page when game stops
  let resetBtn=document.getElementById("reset") 

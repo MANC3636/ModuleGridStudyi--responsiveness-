@@ -1,6 +1,7 @@
 import {username, num1, num2, num3, num4, num5, num6, input1, input2, input3} from "./MathAddhelper.js";
 
 console.log("we're in MathAdd")
+//const pongControl=document.getElementById("Pcontrols")
 
 
 const button1=document.getElementById("mysubmit1");
@@ -33,8 +34,8 @@ function getting_right_ans(button, ans, numA, numB, response){
         const correctSound=document.getElementById("rightAnsSound");
         correctSound.play();
         console.log(correct_count)
-        if (correct_count==3){funBtn.style.display="inline";
-            document.getElementById("buttonDiv").style.display="inline";
+        if (correct_count==3){pongControl.style.display="inline";
+            //document.getElementById("buttonDiv").style.display="inline";
             //info_to_player.innerHTML=" Refresh page, and play More!!";
         }
             }

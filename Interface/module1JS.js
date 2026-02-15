@@ -63,19 +63,22 @@ function loadScript(url, id) {
 
 
 //-------addEventListener Timers----------------------
-document.getElementById("funBtn1").addEventListener("click", () => {
+document.getElementById("funBtnStart").addEventListener("click", () => {
     const display = document.getElementById("timerP1");    
-    const threeMinutes = 1 * 60; // 3 minutes in seconds default 3 minutes
-document.getElementById("game1").style.display="none";
+    const threeMinutes = 3 * 60; // 3 minutes in seconds default 3 minutes
+    const oneMinute = 1 * 60; // 1 minute in seconds
+//document.getElementById("game1").style.display="none";
 document.getElementById("right").style.display="none";
-    startTimer(threeMinutes, display);
+    startTimer(oneMinute, display);
 });
 
 document.getElementById("funBtn").addEventListener("click", () => {
     const display = document.getElementById("timerP1");
-    const threeMinutes = 1 * 60; // 3 minutes in seconds
+    const threeMinutes = 3 * 60; // 3 minutes in seconds
+    const oneMinute = 1 * 60; // 1 minute in seconds
     startTimer(threeMinutes, display);
 });
+
 //-------addEventListener Math Buttons----------------------
 document.getElementById("mathAddBtn").addEventListener("click", () => {
     const addBtb = document.getElementById("mathAddBtn");

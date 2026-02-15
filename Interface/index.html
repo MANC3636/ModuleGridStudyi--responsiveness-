@@ -15,13 +15,16 @@
 <body>
    <!------------------container for whole page------------------>
     <div id="container" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4); gap:10px;" >
-        <div id="header" style="grid-column: span 2; background-color: lightcoral; margin-top: 0; padding-top: 0;">
-            <h1 style="margin-top: 0;">The Addition Game Modularized for two games</h1>
-            <h2>Responsiveness: Interface/index1.html</h2>lapto
-            <h2 id="laptop">laptop=1023/769</h2> &  <h2 id="tablet">tablet=768/481</h2>
-            <button id="mathAddBtn" ; >Math Addition TBD</button>
-            <button id="mathSubBtn" ; >Math Subtraction TBD</button><br>
-            <button id="reset" >reset when game stops</button>
+        <div id="header" style="grid-column: span 2; background-color: lightcoral; margin-top: 0; padding-top: 0; ">
+             <h1 style="margin-top: 0;">The Addition Game Modularized for Pong</h1>
+            <div id="topDetritus" style="display: none;">
+               
+                <h2>Responsiveness: Interface/index1.html</h2>lapto
+                <h2 id="laptop">laptop=1023/769</h2> &  <h2 id="tablet">tablet=768/481</h2>
+            </div>
+            <button id="mathAddBtn" style="font-size: large;" ; >Math Addition TBD</button>
+            <button id="mathSubBtn" style="font-size: large;" >Math Subtraction TBD</button><br>
+            <button id="reset" style="font-size: large; color: blue;">Reset when game stops</button>
         </div>
                
         <!-- <div id="op_container" style="display: flex; flex-direction: row; align-items: center; gap: 20px;"> -->
@@ -46,7 +49,7 @@
     <!-- responsive canvas (visual size scales via CSS; drawing uses 600x400 coordinates) -->
      <div >
                     <div id="timerDiv" style="display:flex; justify-content: auto; width: auto; gap: 10px;">
-                        <p id="timerP1" style="display: left;">3:00 </p>
+                        <p id="timerP1" style="display: left;">1:00 </p>
                         <p id="timerP2"> Remaining</p>
                     </div>   
        <canvas id="game1" width="500px" height="300px"> </canvas><!-- Pong, funBtn -->
@@ -78,9 +81,9 @@
     </div>    
         </div>
                                     <!-----------------math side------------------->
-            <div id="right" style="display:none"><p id="interface_math">we're in Math</p>
+            <div id="right"  style="display:none; font-size: 18px; "><p id="interface_math">Math, and then play</p>
                 
-                <br>
+                
                 <div id="buttonDiv" style="display:none">
                     <button id="mathBtn" onclick="document.getElementById('funBtn').style='display:inline';">mathBtn=funBtn=Pong</button>
                     <button id="mathBtn2" onclick="document.getElementById('funBtn1').style='display:inline';">mathBtn2=funBtn1=Dino</button>
@@ -104,7 +107,7 @@
                 <button id="mysubmit3"> submit</button>
                 <p id="response3">...</p>
             </div>
-            <div id="the_interface" style="grid-column: span 2; background-color: aqua;"><p><b style="color: blueviolet;">Mid-Jan, still working on responsiveness <br>
+            <div id="the_interface" style="grid-column: span 2; background-color: aqua; display: none;"><p><b style="color: blueviolet;">Mid-Jan, still working on responsiveness <br>
                 trouble with the dinotop & rockTop; I can't get their pos correct</b> <br> blah <br><br><b style="color: red; font-size: 15px; "><u>Blah</u></b> . <br>
                 <br><br> More Blah. <br> <br><b style="color: red;"> </b> </p>
                 <p id="screen-width"></p>

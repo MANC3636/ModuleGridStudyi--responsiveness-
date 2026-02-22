@@ -34,9 +34,9 @@ function getting_right_subAans(button, ans, numA, numB, response){
             const correctSound=document.getElementById("rightAnsSound");
             correctSound.play();
             //console.log(correct_count)
-            if (correct_count==3){
+            if (correct_count===3){
                 document.getElementById("Pcontrols").style.display="inline";
-                document.getElementById("funBtn1").style.display="inline";
+                document.getElementById("controls").style.display="inline";
                 //info_to_player.innerHTML=" Refresh page, and play More!!";
             }
         }

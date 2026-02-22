@@ -5,7 +5,7 @@ const rock=document.getElementById("rock")
 const score=document.getElementById("score").innerHTML=NumScore
 const DinoFunBtn=document.getElementById("funBtn1")
 
-const instructions=document.getElementById("timerp2")
+const instructions=document.getElementById("timerP2")
 
 
 
@@ -32,14 +32,14 @@ document.addEventListener('keypress', ()=>{
 //we put it in a setInterval 
 //so that we can check the state of the game at the interval
 //let's us 50ms intervals
-
+//TODO: work on collision Detection.
 setInterval(()=>{
 
     //get rock & dino pos && make rock disappear when offscreen
     const dinoTop=parseInt(window.getComputedStyle(dino).getPropertyValue('top'));
 //check with console.log
-    const rockLeft=parseInt(window.getComputedStyle(rock).getPropertyValue('left'));
-    //const rockLeft=rock.getBoundingClientRect().left;
+    //const rockLeft=parseInt(window.getComputedStyle(rock).getPropertyValue('left'));
+    const rockLeft=rock.getBoundingClientRect().left;
     
     console.log("I'm rockLeft & my pos is: " +rockLeft + " & dinoTop is: " + dinoTop);
     //let's get rid of offscreen rock
@@ -48,15 +48,15 @@ setInterval(()=>{
     if (rockLeft < 10) {
         rock.style.display = "none";
         console.log("rockLeft disappearance is working")
-       ++NumScore;
-       score=document.getElementById("score").innerHTML=NumScore}
-       if(rockLeft>0 && rockLeft<50 && dinoTop>=150){//collision
+       ++NumScore;//increment score, get it working
+       const score=document.getElementById("score").innerHTML=NumScore}
+    if(rockLeft>0 && rockLeft<50 && dinoTop>=150){//collision
         instructions.innerText="Game Over! Your final score is: " + NumScore;
         instructions.style.color="red";
+        NumScore=0;
         alert("Game Over! Your final score is: " + NumScore);
-       location.reload(); /* reloads the current document */
-        
+        location.reload(); /* reloads the current document */
+    
          }  
-     else {
-        rock.style.display = "inline-block";
-     }} , 50);/* every 50ms, we check positions for collision */
+     else {rock.style.display = "inline-block";}
+     } , 50);/* every 50ms, we check positions for collision */

@@ -37,11 +37,7 @@
                 <div id="controls" style="display:none; justify-content: space-between; width: 300px; height: 30px;">
                      
                     <div id="gamesideBtns" style="display:flex;  margin-left: 0%;">
-<<<<<<< HEAD
-                         <button id="funBtn1" style="display:none;" onclick="document.getElementById('game').style='display:block'"; >Click here to start Dino Game</button>
-=======
                          <button id="funBtn1" style="display:flex;" onclick="document.getElementById('game').style='display:block'"; >Dino Button</button>
->>>>>>> origin/RepairDino
                     
                         <button id="funBtn" style="display:flex" >Pong Button1</button>
                        </div>
@@ -59,18 +55,18 @@
        <canvas id="game1" width="500px" height="300px"> </canvas><!-- Pong, funBtn -->
 
         <div class="controls" id="Pcontrols" style="display: none;"><!-- buttons for pong might hide them -->
-        <div class="control-row" >
-            <button id="funBtnStart" class="primary">Start Pong</button>
-            <p>Click any button to make the Dino jump; need responsive button</p>
-            <button id="reset" class="secondary">Reset1</button>
-        </div>
- 
-        <div class="control-row touch-controls" role="group" aria-label="On-screen paddle controls" style="background-color: blue;">
-            <button id="leftBtn" class="control-btn" aria-label="Move left">◀</button>
-            <button id="rightBtn" class="control-btn" aria-label="Move right">▶</button>
-        </div>
+            <div class="control-row" >
+                <button id="funBtnStart" class="primary">Start Pong</button>
+                <p>Click any button to make the Dino jump; need responsive button</p>
+                <button id="reset" class="secondary">Reset1</button>
+            </div>
+    
+            <div class="control-row touch-controls" role="group" aria-label="On-screen paddle controls" style="background-color: blue;">
+                <button id="leftBtn" class="control-btn" aria-label="Move left">◀</button>
+                <button id="rightBtn" class="control-btn" aria-label="Move right">▶</button>
+            </div>
 
-        <p id="info">Controls: Arrow keys or tap the buttons. Buttons are large for touch.</p>
+            <p id="info">Controls: Arrow keys or tap the buttons. Buttons are large for touch.</p>
         </div>
 
                     <div id="game" style="display: none;"><!-- dino game, funBtn1 -->

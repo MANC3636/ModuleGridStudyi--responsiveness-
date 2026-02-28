@@ -62,7 +62,7 @@ background-size: cover;
 /*----------animation-----------*/
 animation-name: moveRock; 
 animation-iteration-count: infinite;
-animation-duration:  1.3s;
+animation-duration:  1s;
 }
 
 @keyframes moveRock{
@@ -75,13 +75,13 @@ animation-duration:  1.3s;
     100%{left: -50px; }
 }
 
-.jump-animation{animation: jump .5s;}
+.jump-animation{animation: jump .7s;}
 
 @keyframes jump{
     0%{top: 225px;}
-    50%{top: 75px;
+    50%{top: 25px;
     background-color: blue;}
-    75%{top: 75px; background-color: red;}
+    75%{top: 25px; background-color: red;}
     100%{top: 225px;}
 
 }

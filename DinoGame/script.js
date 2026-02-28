@@ -52,15 +52,15 @@ setInterval(()=>{
     //let's get rid of offscreen rock
     //collision detection logic
    
-    if (rockLeft < 380) {
+    if (rockLeft <10) {
         rock.style.display = "none";
         }
-    if(rockLeft>374 && rockLeft<390 && dinoTop>=150){//collision
+    if(rockLeft>0 && rockLeft<390 && dinoTop>=150){//collision
         instructions.innerText="Game Over! "
         instructions.style.color="red";
         
-       // alert("Game Over! Your final score is: " + NumScore);
-        //location.reload(); /* reloads the current document */
+       alert("Game Over! Your final score is: " + NumScore);
+        location.reload(); /* reloads the current document */
     
          }  
     

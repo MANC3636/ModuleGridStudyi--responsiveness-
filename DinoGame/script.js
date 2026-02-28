@@ -2,7 +2,8 @@ let NumScore=0
 
 const dino=document.getElementById("dino")
 const rock=document.getElementById("rock")
-const score=document.getElementById("score").innerHTML=NumScore
+const score=document.getElementById("dinoScore")
+score.innerHTML=NumScore
 const DinoFunBtn=document.getElementById("funBtn1")
 
 const instructions=document.getElementById("timerP2")
@@ -44,18 +45,20 @@ setInterval(()=>{
     console.log("I'm rockLeft & my pos is: " +rockLeft + " & dinoTop is: " + dinoTop);
     //let's get rid of offscreen rock
     //collision detection logic
-    
-    if (rockLeft < 10) {
+    numScore=0
+    if (rockLeft < 380) {
         rock.style.display = "none";
         console.log("rockLeft disappearance is working")
        ++NumScore;//increment score, get it working
-       const score=document.getElementById("score").innerHTML=NumScore}
-    if(rockLeft>0 && rockLeft<50 && dinoTop>=150){//collision
+       
+      score.innerHTML=NumScore;
+    }
+    if(rockLeft>374 && rockLeft<390 && dinoTop>=150){//collision
         instructions.innerText="Game Over! Your final score is: " + NumScore;
         instructions.style.color="red";
-        NumScore=0;
-        alert("Game Over! Your final score is: " + NumScore);
-        location.reload(); /* reloads the current document */
+        //NumScore=0;
+       // alert("Game Over! Your final score is: " + NumScore);
+        //location.reload(); /* reloads the current document */
     
          }  
      else {rock.style.display = "inline-block";}

@@ -1,5 +1,5 @@
 /*having trouble with the animation; using BroCode for the rock; will try to Foster for the dino*/
-#score{ text-align: center;}
+#dinoScore{ text-align: center;}
 #container{
 display: flex;
 flex-direction: column;

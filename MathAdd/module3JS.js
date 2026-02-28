@@ -34,7 +34,7 @@ function getting_right_ans(button, ans, numA, numB, response){
         const correctSound=document.getElementById("rightAnsSound");
         correctSound.play();
         console.log(correct_count)
-        if (correct_count==3){pongControl.style.display="inline";
+        if (correct_count==1){pongControl.style.display="inline";
             document.getElementById("controls").style.display="inline";
             document.getElementById("buttonDiv").style.display="inline";
 

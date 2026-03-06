@@ -16,7 +16,7 @@ const instructions=document.getElementById("timerP2")
 function jump(){
     console.log("hi")    
     dino.classList.add('jump-animation');
-    setTimeout(()=>{dino.classList.remove('jump-animation')}, 500);
+    setTimeout(()=>{dino.classList.remove('jump-animation')}, 700);
 }
 //now we attach an EventListener to the document
 
@@ -55,11 +55,11 @@ setInterval(()=>{
     if (rockLeft <10) {
         rock.style.display = "none";
         }
-    if(rockLeft>0 && rockLeft<390 && dinoTop>=150){//collision
+    if(rockLeft>0 && rockLeft<50 && dinoTop>=150){//collision
         instructions.innerText="Game Over! "
         instructions.style.color="red";
-        
-       alert("Game Over! Your final score is: " + NumScore);
+        //console.log("Game Over! Your final score is: " + NumScore); 
+       alert("Game Over! Your Longevity is: " + NumScore);
         location.reload(); /* reloads the current document */
     
          }  

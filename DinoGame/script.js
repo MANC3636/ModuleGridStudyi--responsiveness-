@@ -3,6 +3,7 @@
 const dino=document.getElementById("dino")
 const rock=document.getElementById("rock")
 const score=document.getElementById("dinoScore")
+const game2=document.getElementById("game")
 
 const DinoFunBtn=document.getElementById("funBtn1")
 
@@ -40,26 +41,41 @@ setInterval(()=>{
   ++NumScore;//increment score, get it working
 score.innerHTML=NumScore;}, 1000);/* every 1000ms, we increment score by 1 */  
 
+const gameActive=()=>{window.getComputedStyle(game2).display!=="none";}/* check if game is active by checking if game display is not none */
+
 setInterval(()=>{
 
+    console.log("checking collision");
     //get rock & dino pos && make rock disappear when offscreen
     let dinoTop=parseInt(window.getComputedStyle(dino).getPropertyValue('top'));
 //check with console.log
-    const rockLeft=parseInt(window.getComputedStyle(rock).getPropertyValue('left'));
-    //let rockLeft=rock.getBoundingClientRect().left;
-  
+    //const rockLeft=parseInt(window.getComputedStyle(rock).getPropertyValue('left'));
+    //const rockLeft=rock.getBoundingClientRect().left;
+    const dRect = dino.getBoundingClientRect();
+    const rRect = rock.getBoundingClientRect();
+
+    console.log("dRect left:", dRect.left, "top:", dRect.top, "right:", dRect.right, "bottom:", dRect.bottom);
+    console.log("rRect left:", rRect.left, "top:", rRect.top, "right:", rRect.right, "bottom:", rRect.bottom);
+
+
+console.log("rRect left:", rRect.left, "top:", rRect.top, "right:", rRect.right, "bottom:", rRect.bottom); 
     //let's get rid of offscreen rock
     //collision detection logic
-   
-    if (rockLeft <10) {
-        rock.style.display = "none";
-        }
-    if(rockLeft>0 && rockLeft<50 && dinoTop>=150){//collision
+   if (!gameActive()) {return;}
+
+       
+   if (rRect.right >= dRect.left &&
+        rRect.left   <= dRect.right &&
+        rRect.bottom >= dRect.top &&
+        rRect.top    <= dRect.bottom)
+        {//collision
+        console.log("Collision detected!");
         instructions.innerText="Game Over! "
         instructions.style.color="red";
-        //console.log("Game Over! Your final score is: " + NumScore); 
-       alert("Game Over! Your Longevity is: " + NumScore);
-        location.reload(); /* reloads the current document */
+        console.log("dRect left:", dRect.left, "top:", dRect.top, "right:", dRect.right, "bottom:", dRect.bottom);
+        console.log("rRect left:", rRect.left, "top:", rRect.top, "right:", rRect.right, "bottom:", rRect.bottom); 
+       //alert("Game Over! Your Longevity is: " + NumScore);
+       // location.reload(); /* reloads the current document */
     
          }  
     

@@ -43,12 +43,11 @@ score.innerHTML=NumScore;}, 1000);/* every 1000ms, we increment score by 1 */
 setInterval(()=>{
 
     //get rock & dino pos && make rock disappear when offscreen
-    const dinoTop=parseInt(window.getComputedStyle(dino).getPropertyValue('top'));
+    let dinoTop=parseInt(window.getComputedStyle(dino).getPropertyValue('top'));
 //check with console.log
-    //const rockLeft=parseInt(window.getComputedStyle(rock).getPropertyValue('left'));
-    const rockLeft=rock.getBoundingClientRect().left;
-    
-    console.log("I'm rockLeft & my pos is: " +rockLeft + " & dinoTop is: " + dinoTop);
+    const rockLeft=parseInt(window.getComputedStyle(rock).getPropertyValue('left'));
+    //let rockLeft=rock.getBoundingClientRect().left;
+  
     //let's get rid of offscreen rock
     //collision detection logic
    

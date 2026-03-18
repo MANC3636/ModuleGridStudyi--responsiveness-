@@ -67,8 +67,8 @@ animation-timing-function: linear;
 }
  
 @keyframes moveRock{
-    0%{transform: translateX(300px) rotateZ(0deg);}
-    100% {transform: translateX(-320px) rotateZ(-360deg);}
+    0%{transform: translateX(300px) ;}
+    100% {transform: translateX(-320px) ;}
 } 
 /* make rock move and rotate */
 /* @keyframes moveRock1{

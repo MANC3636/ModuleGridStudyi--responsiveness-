@@ -96,12 +96,33 @@ document.getElementById("mathAddBtn").addEventListener("click", () => {
 document.getElementById("mathSubBtn").addEventListener("click", () => {
     const subBtb = document.getElementById("mathSubBtn");
     subBtb.style.backgroundColor="lightblue";
+    /**
+     * Loads an external JavaScript file and injects it into a specified HTML element.
+     * @function loadScript
+     * @param {string} filePath - The relative path to the JavaScript file to load (e.g., "../MathSub/insert.js")
+     * @param {string} targetElementId - The ID of the HTML element where the script content will be injected (e.g., "subHTML")
+     * @returns {Promise|void} The result of loading and executing the script
+     * @description Loads the script from the specified path and inserts it into the DOM element with the ID "subHTML"
+     */
     const script = loadScript("../MathSub/insert.js", "subHTML");
     script.onload = () => {
         console.log("subHTML loaded");
     };
     script.onerror = () => {
         console.error("Failed to load subHTML script");
+    };
+    document.getElementById("right").style.display="block";
+})
+
+document.getElementById("mathMulBtn").addEventListener("click", () => {
+    const mulBtb = document.getElementById("mathMulBtn");
+    mulBtb.style.backgroundColor="lightyellow";
+    const script = loadScript("../Multiply/insert.js", "mulHTML");
+    script.onload = () => {
+        console.log("multHTML loaded");
+    };
+    script.onerror = () => {
+        console.error("Failed to load multHTML script");
     };
     document.getElementById("right").style.display="block";
 })

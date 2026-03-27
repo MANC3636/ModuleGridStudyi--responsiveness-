@@ -1,16 +1,64 @@
-//okay.  Now I can set up algorithms here than can migrate to the HTML.  I use export here and
-//import in the main js file (here insert.js)
+//okay.  Division works, but I have to do something about prime numbers.
+
 
 console.log("okay, I can feed data to insert.js, which will change the html in math-insert")
 
-export var username="Student";
+export var username="Pupil";
 
-export var num1=Math.floor(Math.random()*10);
-export var num2=Math.floor(Math.random()*10);
-export var num3=Math.floor(Math.random()*10);
-export var num4=Math.floor(Math.random()*10);
-export var num5=Math.floor(Math.random()*10);
-export var num6=Math.floor(Math.random()*10);
+function isPrime(num) {
+    // Validate input type
+    if (typeof num !== "number" || !Number.isInteger(num)) {
+        throw new Error("Input must be an integer.");
+    }
+
+    // Handle numbers less than 2 (not prime)
+    if (num < 2) return false;
+
+    // 2 and 3 are prime
+    if (num === 2 || num === 3) return true;
+
+    // Eliminate even numbers and multiples of 3
+    if (num % 2 === 0 || num % 3 === 0) return false;
+
+    // Check divisors up to sqrt(num)
+    for (let i = 5; i * i <= num; i += 6) {
+        if (num % i === 0 || num % (i + 2) === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+export var num1=Math.floor(Math.random()*20)+1;
+const divisors1 = [];
+for (let i = 1; i <= num1; i++) {
+    if (num1 % i === 0 ) {
+        
+        divisors1.push(i);
+    }
+}
+export var divisor2=divisors1[Math.floor(Math.random() * divisors1.length)];
+export var num2=divisor2;
+
+export var num3=Math.floor(Math.random()*20)+1;
+const divisors3 = [];   
+for (let i = 1; i <= num3; i++) {
+    if (num3 % i === 0) {
+        divisors3.push(i);
+    }   
+}
+export var divisor4=divisors3[Math.floor(Math.random() * divisors3.length)];
+export var num4=divisor4;
+
+export var num5=Math.floor(Math.random()*20)+1;
+const divisors5 = [];
+for (let i = 1; i <= num5; i++) {
+    if (num5 % i === 0) {
+        divisors5.push(i);
+    }   
+}
+export var divisor6=divisors5[Math.floor(Math.random() * divisors5.length)];    
+export var num6=divisor6;
 
 
 
@@ -46,9 +94,9 @@ function mult3(num5, num6){return num5/num6;}
 
 
 
-input1.setAttribute("placeholder",  username + ", try " + num1 + " times " +  num2);
-input2.setAttribute("placeholder",  username + ", try " + num3 + " times " +  num4);
-input3.setAttribute("placeholder",  username + ", try " + num5 + " times " +  num6);
+input1.setAttribute("placeholder",  username + ", try " + num1 + " divided by " +  num2);
+input2.setAttribute("placeholder",  username + ", try " + num3 + " divided by " +  num4);
+input3.setAttribute("placeholder",  username + ", try " + num5 + " divided by " +  num6);
 
 
 //TODO:  separate PhaseA into A & B. What is the HTML for that?

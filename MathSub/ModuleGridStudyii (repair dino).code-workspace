@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"name": "ModuleGridStudyii (repair dino)",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5502,
+		"liveServer.settings.multiRootWorkspaceName": "ModuleGridStudyii (repair dino)"
+	}
+}

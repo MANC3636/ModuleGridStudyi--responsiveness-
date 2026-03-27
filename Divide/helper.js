@@ -29,7 +29,16 @@ function isPrime(num) {
     return true;
 }
 
-export var num1=Math.floor(Math.random()*20)+1;
+/* number that is not a prime number and is a positive integer */
+function getNonPrimeNumber(min, max) {
+    let num;
+    do {
+        num = Math.floor(Math.random() * (max - min + 1)) + min;
+    } while (isPrime(num) || num < 1);
+    return num;
+}
+
+export var num1=getNonPrimeNumber(1, 20);
 const divisors1 = [];
 for (let i = 1; i <= num1; i++) {
     if (num1 % i === 0 ) {

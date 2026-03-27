@@ -25,7 +25,7 @@ function defeat(response){
 function getting_right_subAans(button, ans, numA, numB, response){
         console.log("in Multiply getting_right_subAans")  
     button.addEventListener('click', function(){ 
-        if (ans.value==numA*numB){
+        if (ans.value==numA/numB){
             response.innerHTML="that is the correct answer";
             correct_count++;
             response.classList.add("bouncing");

@@ -126,3 +126,17 @@ document.getElementById("mathMulBtn").addEventListener("click", () => {
     };
     document.getElementById("right").style.display="block";
 })
+
+document.getElementById("mathDivBtn").addEventListener("click", () => {
+    const divBtb = document.getElementById("mathDivBtn");
+    divBtb.style.backgroundColor="lightpink";
+    const script = loadScript("../Divide/insert.js", "divHTML");
+    script.onload = () => {
+        console.log("divHTML loaded");
+    };
+    script.onerror = () => {
+        console.error("Failed to load divHTML script");
+    };
+    document.getElementById("right").style.display="block";
+})
+

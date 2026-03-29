@@ -54,9 +54,6 @@ setInterval(()=>{
     const dRect = dino.getBoundingClientRect();
     const rRect = rock.getBoundingClientRect();
 
-    console.log("dRect left:", dRect.left, "top:", dRect.top, "right:", dRect.right, "bottom:", dRect.bottom);
-    console.log("rRect left:", rRect.left, "top:", rRect.top, "right:", rRect.right, "bottom:", rRect.bottom);
-
 
 console.log("rRect left:", rRect.left, "top:", rRect.top, "right:", rRect.right, "bottom:", rRect.bottom); 
     //let's get rid of offscreen rock
@@ -74,7 +71,7 @@ console.log("rRect left:", rRect.left, "top:", rRect.top, "right:", rRect.right,
         instructions.style.color="red";
         console.log("dRect left:", dRect.left, "top:", dRect.top, "right:", dRect.right, "bottom:", dRect.bottom);
         console.log("rRect left:", rRect.left, "top:", rRect.top, "right:", rRect.right, "bottom:", rRect.bottom); 
-       //alert("Game Over! Your Longevity is: " + NumScore);
+       alert("Game Over! Your Longevity is: " + NumScore);
        // location.reload(); /* reloads the current document */
     
          }  
@@ -82,4 +79,4 @@ console.log("rRect left:", rRect.left, "top:", rRect.top, "right:", rRect.right,
      else {rock.style.display = "inline-block";
         
      }
-     } , 50);/* every 50ms, we check positions for collision */
+     } , 5);/* every 50ms, we check positions for collision */

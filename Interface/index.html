@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../DinoGame/DinoStyle.css">
+    <link rel="stylesheet" href="../Dino/Dino.css">
 
     <title>The Addition Game Modularized for two arcade games</title> 
 
@@ -24,7 +24,7 @@
                 <h2>Responsiveness: Interface/index1.html</h2>
                 <h2 id="laptop">laptop=1023/769</h2> &  <h2 id="tablet">tablet=768/481</h2>
             </div>
-            <button id="mathAddBtn" style="font-size: large;" ; >Math Addition TBD</button>
+            <button id="mathAddBtn" style="font-size: large;"  >Math Addition TBD</button>
             <button id="mathSubBtn" style="font-size: large;" >Math Subtraction TBD</button><br>            
             <button id="mathMulBtn" style="font-size: large;" >Math Multiplication TBD</button>
             <button id="mathDivBtn" style="font-size: large;" >Math Division TBD</button> <br>
@@ -43,6 +43,7 @@
                      
                     <div id="gamesideBtns" style="display:flex;  margin-left: 0%;">
                          <button id="funBtn1" style="display:flex;" onclick="document.getElementById('game').style='display:block'"; >Dino Button</button>
+                         <!-- <button id="funBtn1" style="display: flex;" onclick="document.getElementById('dinoGame').style='display:block'";>DinoBtn</button> -->
                     
                         <button id="funBtn" style="display:flex" >Pong Button1</button>
                        </div>
@@ -74,14 +75,14 @@
             <p id="info">Controls: Arrow keys or tap the buttons. Buttons are large for touch.</p>
         </div>
 
-                    <div id="game" style="display: none;"><!-- dino game, funBtn1 -->
+                    <div id="game" style="display: none;"> 
                 
                         <div id="dino">Dino Here</div>
                         <div id="rock">Rock Here</div>
                         <h1>Jan 25: still working on responsiveness</h1>
-                        <h1 id="dinoScore"></h1><!---------awkwardly placed; might move-->
-                    </div>
-            
+                        <h1 id="dinoScore"></h1> awkwardly placed; might move
+                    </div> 
+             
 
         </div>  
     </div>    
@@ -138,7 +139,7 @@
     
 
       <script src="../Game1/module2JS.js"></script><!-- Pong -->
-      <script src="../DinoGame/script.js"></script><!-- Dino Game -->
+      <script src="../Dino/script.js"></script> <!--Dino Game -->
       
       <script src="module1JS.js"></script><!-- Interface -->
     

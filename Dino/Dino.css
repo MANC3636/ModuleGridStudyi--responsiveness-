@@ -1,0 +1,90 @@
+
+
+
+#score{ text-align: center;}
+
+#game{
+width: 600px;
+height: 300px;
+border: 2px solid black;
+margin: auto;
+background-image: url("Image20251116201940.jpg");
+background-size: cover;
+}
+
+#dino{
+width: 75px;
+height: 75px;
+
+
+position: relative;
+top: 225px;
+
+background-image: url("https://th.bing.com/th/id/R.04f5f0e83b533147f5f09520738a4d2b?rik=cYfjf%2fkadDPZow&riu=http%3a%2f%2fpixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com%2fimage%2f939dba0df7170e2.png&ehk=hhbjc3ZsqIk%2fbMdSbjFf%2bkbSGQoYc0IsgHaD04DW0Ms%3d&risl=&pid=ImgRaw&r=0");
+background-size: cover;
+/*---------animation-----------*/
+/*animation-name: dinoJump;
+animation-iteration-count: 5;
+animation-duration: 1s  ;*/
+
+}
+
+
+
+
+
+#rock{
+width: 50px;
+height: 50px;
+
+position: relative;
+top: 175px;
+left: 550px;
+background-image:url("https://th.bing.com/th/id/R.9478ee9836ff0a78b241b99ba30aaa72?rik=khZ%2bvW%2fwuGQOBA&riu=http%3a%2f%2fpixelartmaker.com%2fart%2fda268f06e621b21.png&ehk=dEYs2jkBmKLTdT6nRtBB3Vs19%2bSIEMg0U8mGPHOSR7g%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1") ;
+background-size: cover;
+
+/*-----animation-----*/
+animation-name: moveRock;
+animation-iteration-count: infinite;
+animation-duration:  5s;
+}
+
+#floating_para{ 
+/*-------animation---------*/
+animation-name: movePara, changeColor;
+animation-iteration-count: infinite;
+animation-duration:  5s;
+}
+
+
+@keyframes movePara{
+    from{transform: translateX(-50px);}
+
+    to {transform: translateX(-800px);}
+}
+
+@keyframes changeColor{
+    0% {color: red;}
+    50% {color: greenyellow;}
+    100% {color: blue;}
+}
+
+@keyframes moveRock{
+    0%{left: 550px;
+        top: 175px;}
+    45%{left: 300px;
+        top: 0px;}
+    50%{left: 100px;
+        top: 100px;}
+    100%{left: -50px;
+        top: 305px;}
+}
+
+.dinoJump-animation {animation: dinoJump 4s;}
+
+@keyframes dinoJump {
+    0%{top: 225px;}
+    50%{top: 75px;}
+   75%{top: 75px;}
+    100%{top: 225px;}
+}
